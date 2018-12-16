@@ -8,6 +8,7 @@ namespace Assets.Enums
 {
     public enum ObjectTags
     {
-        Player = 0
+        Player = 0,
+        Floor = 1
     }
 }

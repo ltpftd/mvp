@@ -13,12 +13,6 @@ public class ZombieAI : MonoBehaviour
     {
         _health = 10;
         aiTransform = transform;
-        Player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
-
-    private void OnEnable()
-    {
-        Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Start()
