@@ -1,6 +1,6 @@
 ﻿using Assets.Enums;
 using UnityEngine;
-using UnityEngine.Networking;
+using Mirror;
 
 public class PlayerController : NetworkBehaviour
 {
