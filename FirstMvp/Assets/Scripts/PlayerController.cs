@@ -16,11 +16,12 @@ public class PlayerController : NetworkBehaviour
 
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        Vector3 deltaXZ = new Vector3(x, 0, z);
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Physics.Raycast(ray, out hit);
         transform.LookAt(hit.point);
-        transform.Translate(x, 0, z);
+        transform.Translate(deltaXZ, Space.World);
     }
 
     public override void OnStartLocalPlayer()
